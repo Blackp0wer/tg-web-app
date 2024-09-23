@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // import { Alert } from 'vue-tg';
-// import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import Navbar from "./components/layout/Navbar.vue";
 import Stats from "./components/Stats.vue";
 import Character from "./components/Character.vue";
@@ -8,7 +8,10 @@ import { useWebApp } from "vue-tg";
 
 const tg = useWebApp();
 
-console.log(tg.initDataUnsafe) 
+const data = ref(tg)
+onMounted(() => {
+  console.log(data)
+})
 </script>
 
 <template>
@@ -16,6 +19,7 @@ console.log(tg.initDataUnsafe)
     <div class="wrapper">
       <Character />
       <Stats />
+      {{ data }}
     </div>
     <router-view></router-view>
     <footer>
