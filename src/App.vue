@@ -4,7 +4,11 @@
 import Navbar from "./components/layout/Navbar.vue";
 import Stats from "./components/Stats.vue";
 import Character from "./components/Character.vue";
+import { useWebApp } from "vue-tg";
 
+const tg = useWebApp();
+
+console.log(tg.initDataUnsafe) 
 </script>
 
 <template>
