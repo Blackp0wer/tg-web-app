@@ -9,8 +9,10 @@ import { useWebApp } from "vue-tg";
 const tg = useWebApp();
 
 const data = ref(tg)
+let second: any
 onMounted(() => {
   console.log(data)
+  second = JSON.parse(second)
 })
 </script>
 
@@ -19,8 +21,9 @@ onMounted(() => {
     <div class="wrapper">
       <Character />
       <Stats />
-      {{ data }}
     </div>
+    {{ data }}
+    {{ second }}
     <router-view></router-view>
     <footer>
       <Navbar />
