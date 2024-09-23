@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // import { Alert } from 'vue-tg';
-import { ref } from "vue";
+// import { ref } from "vue";
 import Navbar from "./components/layout/Navbar.vue";
 import Stats from "./components/Stats.vue";
 import Character from "./components/Character.vue";

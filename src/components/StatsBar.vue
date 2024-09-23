@@ -15,7 +15,7 @@
 defineProps<
 {
     color:string
-    progress:number
+    progress:string
     icon:any
 }>()
 
