@@ -8,7 +8,7 @@ import { useWebApp } from "vue-tg";
 
 const tg = useWebApp();
 
-const data = ref(tg)
+const data = ref(tg.initDataUnsafe.user?.username)
 let second: any
 onMounted(() => {
   console.log(data)
@@ -23,7 +23,6 @@ onMounted(() => {
       <Stats />
     </div>
     {{ data }}
-    {{ second }}
     <router-view></router-view>
     <footer>
       <Navbar />
