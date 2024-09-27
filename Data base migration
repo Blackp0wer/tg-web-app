@@ -1,0 +1,18 @@
+class CreateUsers < ActiveRecord::Migration[7.2]
+  def change
+    create_table :users do |t|
+      t.text :body
+      t.integer :user_id, index=true
+      t.integer :username
+      t.date :join_date
+      t.integer :coins
+      t.integer :health
+      t.integer :exp
+      t.integer :lvl
+      t.integer :role
+      t.string :avatar_url
+      
+      t.timestamps
+    end
+  end
+end
